@@ -76,5 +76,22 @@ public class Main {
 
     public static void task5() {
         System.out.println("Task 5");
+        int[] array = {1, 2, 3, 4, 5, 6, 7};
+        int rotateCount = 3; //Сдвиг вправо
+        int buf = 0;
+        for (int i = 0; i < rotateCount; i++) {
+            for (int index = array.length - 1; index > 0; index--) {
+                buf = array[index]; //помещаем последний эл-т в переменную
+                while (index > 0) {
+                    array[index] = array[index - 1];//перемещаем в свободный (последний) индекс, значение слева
+                    index--;
+                }
+                array[0] = buf;//помещаем в первый индекс, значение из переменной
+            }
+        }
+        System.out.println(Arrays.toString(array));
+        //7,1,2,3,4,5,6
+        //6,7,1,2,3,4,5,
+        //5,6,7,1,2,3,4
     }
 }
