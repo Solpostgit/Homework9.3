@@ -2,11 +2,11 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        task1();
+        task1(); //Генератор случайных массивов
         task2();
-        task3();
-        task4();/*
-        task5();*/
+        task3(); //Вывод массива метод Arrays.toString
+        task4(); // Сравнение массивов
+        task5(); //Сложение эл-тов массива, цикл For each
     }
 
     public static int[] generateRandomArray() {
@@ -71,5 +71,10 @@ public class Main {
         }
         System.out.println(Arrays.toString(arr));
         System.out.println(Arrays.toString(arr2));
+        System.out.println();
+    }
+
+    public static void task5() {
+        System.out.println("Task 5");
     }
 }
